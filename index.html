@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<!-- /* Переделка функционала выбора города */ -->
+		<div class="dropdown menu-cities">
+			<div class="btn btn-secondary dropdown-toggle" role="button" id="header-city-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<svg class="mm">
+					<use xlink:href="#icon_map-marker"></use>
+				</svg>
+				<span>Москва</span>
+				<svg class="arr">
+					<use xlink:href="#icon_arrow"></use>
+				</svg>
+				<div class="location--current">
+					<span class="location--current__question">Ваш город Москва?</span>
+					<div class="location--current__buttons">
+						<a href="#" class="button yes">Да, верно</a>
+						<a href="#location--modal" class="button button--white no">Нет, другой</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="modal" id="location--modal">
+		<div class="modal--wrapper modal--wrapper__location">
+			<div class="modal--close">
+				<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0.416967 2.43025C-0.138987 1.8743 -0.138987 0.972918 0.416966 0.416965C0.97292 -0.138988 1.8743 -0.138988 2.43025 0.416965L25.583 23.5697C26.139 24.1257 26.139 25.0271 25.583 25.583C25.0271 26.139 24.1257 26.139 23.5697 25.583L0.416967 2.43025Z" fill="#cf2127"/>
+					<path d="M23.5697 0.416966C24.1257 -0.138988 25.0271 -0.138988 25.583 0.416965C26.139 0.972919 26.139 1.8743 25.583 2.43025L2.43025 25.583C1.8743 26.139 0.972918 26.139 0.416965 25.583C-0.138988 25.0271 -0.138988 24.1257 0.416965 23.5697L23.5697 0.416966Z" fill="#cf2127"/>
+				</svg>
+			</div>
+			<div class="modal--wrapper__bottom">
+				<h2 class="h2">Выбор города</h2>
+				<div class="modal--wrapper__input">
+					<input type="text" placeholder="Найти">
+					<div class="modal--wrapper__loading">
+						<img src="img/loading.gif">
+					</div>
+				</div>
+				<div class="modal--wrapper__block">
+					<div class="modal--wrapper__cities">
+						<ul class="cities">
+							<li class="h3">А</li>
+							<li><a href="#">Абакан</a></li>
+							<li><a href="#">Адыгейск</a></li>
+							<li><a href="#">Азов</a></li>
+							<li><a href="#">Александров</a></li>
+							<li><a href="#">Архангельск</a></li>
+							<li class="h3">Б</li>
+							<li><a href="#">Балашиха</a></li>
+							<li><a href="#">Барнаул</a></li>
+							<li><a href="#">Батырево</a></li>
+							<li><a href="#">Березники</a></li>
+							<li><a href="#">Берёзовский</a></li>
+							<li><a href="#">Беслан</a></li>
+							<li><a href="#">Братск</a></li>
+							<li><a href="#">Брянск</a></li>
+							<li><a href="#">Быково</a></li>
+							<li class="h3">В</li>
+							<li><a href="#">Великие Луки</a></li>
+							<li><a href="#">Великий Новгород</a></li>
+							<li><a href="#">Вилюйск</a></li>
+							<li><a href="#">Владивосток</a></li>
+							<li><a href="#">Владимир</a></li>
+							<li><a href="#">Волгоград</a></li>
+							<li><a href="#">Волжский</a></li>
+							<li><a href="#">Вологда</a></li>
+							<li><a href="#">Волоколамск</a></li>
+							<li><a href="#">Воронеж</a></li>
+							<li><a href="#">Вышний Волочек</a></li>
+							<li><a href="#">Вязники</a></li>
+							<li><a href="#">Гиагинская</a></li>
+							<li><a href="#">Городец</a></li>
+							<li><a href="#">Гороховец</a></li>
+							<li><a href="#">Гусь-Хрустальный</a></li>
+							<li><a href="#">Дальнегорск</a></li>
+							<li class="h3">Д</li>
+							<li><a href="#">Дальнегорск</a></li>
+							<li><a href="#">Дзержинск</a></li>
+							<li><a href="#">Димитровград</a></li>
+							<li><a href="#">Дмитров</a></li>
+							<li><a href="#">Долинск</a></li>
+							<li class="h3">Е</li>
+							<li><a href="#">Ейск</a></li>
+							<li><a href="#">Екатеринбург</a></li>
+							<li class="h3">Ж</li>
+							<li><a href="#">Жердевка</a></li>
+							<li><a href="#">Жигулевск</a></li>
+							<li><a href="#">Жуковский</a></li>
+							<li class="h3">З</li>
+							<li><a href="#">Зеленоград</a></li>
+							<li><a href="#">Зерноград</a></li>
+							<li class="h3">И</li>
+							<li><a href="#">Иваново</a></li>
+							<li><a href="#">Ивантеевка</a></li>
+							<li><a href="#">Ижевск</a></li>
+							<li><a href="#">Избербаш</a></li>
+							<li><a href="#">Иркутск</a></li>
+							<li><a href="#">Ишим</a></li>
+							<li class="h3">К</li>
+							<li><a href="#">Кавалерово</a></li>
+							<li><a href="#">Калининград</a></li>
+							<li><a href="#">Калуга</a></li>
+							<li><a href="#">Канаш</a></li>
+							<li><a href="#">Кандалакша</a></li>
+							<li><a href="#">Карпинск</a></li>
+							<li><a href="#">Карсун</a></li>
+							<li><a href="#">Касимов</a></li>
+							<li><a href="#">Кинешма</a></li>
+							<li><a href="#">Киржач</a></li>
+							<li><a href="#">Киров</a></li>
+							<li><a href="#">Ковров</a></li>
+							<li><a href="#">Ковылкино</a></li>
+							<li><a href="#">Коломна</a></li>
+							<li><a href="#">Копейск</a></li>
+							<li><a href="#">Кораблино</a></li>
+							<li><a href="#">Коркино</a></li>
+							<li><a href="#">Кострома</a></li>
+							<li><a href="#">Краноуфимск</a></li>
+							<li><a href="#">Красногвардейское</a></li>
+							<li><a href="#">Краснодар</a></li>
+							<li><a href="#">Красноярск</a></li>
+							<li><a href="#">Кропоткин</a></li>
+							<li><a href="#">Кстово</a></li>
+							<li><a href="#">Кузоватово</a></li>
+							<li><a href="#">Кулебаки</a></li>
+							<li class="h3">Л</li>
+							<li><a href="#">Лесозаводск</a></li>
+							<li><a href="#">Лесосибирск</a></li>
+							<li><a href="#">Липецк</a></li>
+							<li><a href="#">Лобня</a></li>
+							<li><a href="#">Ломоносов</a></li>
+							<li class="h3">М</li>
+							<li><a href="#">Майкоп</a></li>
+							<li><a href="#">Махачкала</a></li>
+							<li><a href="#">Медногорск</a></li>
+							<li><a href="#">Меленки</a></li>
+							<li><a href="#">Мичуринск</a></li>
+							<li><a href="#">Моршанск</a></li>
+							<li><a href="#">Мурманск</a></li>
+							<li><a href="#">Муром</a></li>
+							<li><a href="#">Мытищи</a></li>
+							<li class="h3">Н</li>
+							<li><a href="#">Нальчик</a></li>
+							<li><a href="#">Нерехта</a></li>
+							<li><a href="#">Нефтеюганск</a></li>
+							<li><a href="#">Нижневартовск</a></li>
+							<li><a href="#">Нижнеудинск</a></li>
+							<li><a href="#">Нижний Новгород</a></li>
+							<li><a href="#">Нижний Тагил</a></li>
+							<li><a href="#">Нижняя Тура</a></li>
+							<li><a href="#">Николаевск</a></li>
+							<li><a href="#">Новомосковск</a></li>
+							<li><a href="#">Новороссийск</a></li>
+							<li><a href="#">Новосибирск</a></li>
+							<li><a href="#">Новоспасское</a></li>
+							<li class="h3">О</li>
+							<li><a href="#">Обнинск</a></li>
+							<li><a href="#">Одинцово</a></li>
+							<li><a href="#">Орел</a></li>
+							<li><a href="#">Оренбург</a></li>
+							<li><a href="#">Орехово-Зуево</a></li>
+							<li class="h3">П</li>
+							<li><a href="#">Партизанск</a></li>
+							<li><a href="#">Пенза</a></li>
+							<li><a href="#">Первоуральск</a></li>
+							<li><a href="#">Пермь</a></li>
+							<li><a href="#">Пограничный</a></li>
+							<li><a href="#">Подольск</a></li>
+							<li><a href="#">Понежукай</a></li>
+							<li><a href="#">Псков</a></li>
+							<li><a href="#">Пушкино</a></li>
+							<li class="h3">Р</li>
+							<li><a href="#">Радужный</a></li>
+							<li><a href="#">Рассказово</a></li>
+							<li><a href="#">Республика Адыгея</a></li>
+							<li><a href="#">Родники</a></li>
+							<li><a href="#">Ростов-на-Дону</a></li>
+							<li><a href="#">Рыбинск</a></li>
+							<li><a href="#">Ряжск</a></li>
+							<li><a href="#">Рязань</a></li>
+							<li class="h3">С</li>
+							<li><a href="#">Самара</a></li>
+							<li><a href="#">Санкт-Петербург</a></li>
+							<li><a href="#">Саранск</a></li>
+							<li><a href="#">Саратов</a></li>
+							<li><a href="#">Сасово</a></li>
+							<li><a href="#">Севастополь</a></li>
+							<li><a href="#">Семёнов</a></li>
+							<li><a href="#">Сергач</a></li>
+							<li><a href="#">Сергиев Посад</a></li>
+							<li><a href="#">Серов</a></li>
+							<li><a href="#">Серпухов</a></li>
+							<li><a href="#">Сибай</a></li>
+							<li><a href="#">Смоленск</a></li>
+							<li><a href="#">Собинка</a></li>
+							<li><a href="#">Сочи</a></li>
+							<li><a href="#">Спасск-Дальний</a></li>
+							<li><a href="#">Ставрополь</a></li>
+							<li><a href="#">Суздаль</a></li>
+							<li><a href="#">Сургут</a></li>
+							<li><a href="#">Сыктывкар</a></li>
+							<li class="h3">Т</li>
+							<li><a href="#">Тавда</a></li>
+							<li><a href="#">Тамбов</a></li>
+							<li><a href="#">Таруса</a></li>
+							<li><a href="#">Тверь</a></li>
+							<li><a href="#">Томск</a></li>
+							<li><a href="#">Тула</a></li>
+							<li><a href="#">Тульский</a></li>
+							<li><a href="#">Тюмень</a></li>
+							<li class="h3">У</li>
+							<li><a href="#">Уварово</a></li>
+							<li><a href="#">Ульяновск</a></li>
+							<li><a href="#">Урень</a></li>
+							<li><a href="#">Уссурийск</a></li>
+							<li><a href="#">Усть-Донецкий</a></li>
+							<li><a href="#">Усть-Илимск</a></li>
+							<li><a href="#">Уфа</a></li>
+							<li><a href="#">Ухолово</a></li>
+							<li class="h3">Х</li>
+							<li><a href="#">Ханты-Мансийск</a></li>
+							<li class="h3">Ч</li>
+							<li><a href="#">Чапаевск</a></li>
+							<li><a href="#">Чаплыгин</a></li>
+							<li><a href="#">Чебоксары</a></li>
+							<li><a href="#">Челябинск</a></li>
+							<li><a href="#">Черемхово</a></li>
+							<li class="h3">Ш</li>
+							<li><a href="#">Шарья</a></li>
+							<li><a href="#">Шатки</a></li>
+							<li><a href="#">Шатура</a></li>
+							<li><a href="#">Шаховская</a></li>
+							<li><a href="#">Шахты</a></li>
+							<li class="h3">Ю</li>
+							<li><a href="#">Юрьев-Польский</a></li>
+							<li class="h3">Я</li>
+							<li><a href="#">Ярославль</a></li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$('.location--current__buttons .no').click(function(){
+			$('.location--current').hide();
+			$('#location--modal').css({"opacity" : "1", "z-index" : "999999"}).hide().fadeIn();
+			$('html').addClass('overlay');
+		});
+		$('.modal--close').click(function(){
+			$('.modal').fadeOut().css({"opacity" : "0", "z-index" : "-1"});
+			$('html').removeClass('overlay');
+		});
+	</script>
+</body>
+</html>

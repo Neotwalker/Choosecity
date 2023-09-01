@@ -469,6 +469,9 @@
 	}
 
 	@media only screen and (max-width: 1367px){
+		.modal{
+			overflow-x: auto;
+		}
 		.modal--wrapper {
 			margin: 25px auto;
 		}
@@ -485,6 +488,10 @@
 			right: 30px;
 			top: 30px;
 		}
+		.modal--wrapper__location .h2{
+			font-size: 36px;
+			line-height: 1;
+		}
 		.modal--wrapper__location input {
 			font-size: 18px;
 			margin-bottom: 30px;
@@ -498,12 +505,21 @@
 		.modal--wrapper__block {
 			max-height: 300px;
 		}
+		.modal--wrapper__cities .cities .h3{
+			font-size: 30px;
+		}
+		.modal--wrapper__cities .cities li{
+			font-size: 18px;
+			line-height: 28px;
+		}
 	}
 
 	@media only screen and (max-width: 1280px){
 		.modal--wrapper {
 			margin-left: 20px;
 			margin-right: 20px;
+			margin-top: 20px;
+			margin-bottom: 20px;
 		}
 		.modal--wrapper__location {
 			height: -webkit-fit-content;
@@ -536,7 +552,9 @@
 			-ms-transform: translateX(0);
 			transform: translateX(0);
 		}
-
+		.modal--wrapper__block{
+			max-height: 300px;
+		}
 	}
 
 	@media only screen and (max-width: 1100px){
@@ -601,6 +619,9 @@
 			-moz-column-count: 2;
 			column-count: 2;
 		}
+		.modal--wrapper__block{
+			max-height: 70vh;
+		}
 	}
 
 	@media only screen and (max-width: 480px){
@@ -632,12 +653,8 @@
 		}
 	}
 
-	@media (max-height: 992px){
-		.modal--wrapper__location {
-			height: -webkit-fit-content;
-			height: -moz-fit-content;
-			height: fit-content;
-			margin: auto 20px;
-			padding: 25px;
+	@media only screen and (max-width: 320px){
+		.modal--wrapper__block{
+			max-height: 60vh;
 		}
 	}
